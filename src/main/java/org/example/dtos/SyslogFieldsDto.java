@@ -8,19 +8,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class SyslogFieldsDto {
 
     /** required: ["syslogFieldsVersion","syslogMsg"] */
-    @NotNull
     private Double syslogFieldsVersion;
 
     private String eventSourceType;
     private String syslogTag;
-
-    @NotNull
     private String syslogMsg;
-
     private String syslogMsgHost;
     private String syslogFacility;
     private String syslogPriority;

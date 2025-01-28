@@ -8,26 +8,26 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class SipSignalingFieldsDto {
 
     /** required: ["correlator","localIpAddress","localPort","remoteIpAddress","remotePort","sipSignalingFieldsVersion"] */
-    @NotNull
+
     private String correlator;
 
-    @NotNull
+
     private String localIpAddress;
 
-    @NotNull
+
     private Integer localPort;
 
-    @NotNull
+
     private String remoteIpAddress;
 
-    @NotNull
+
     private Integer remotePort;
 
-    @NotNull
+
     private Double sipSignalingFieldsVersion;
 
     private String summarySip;

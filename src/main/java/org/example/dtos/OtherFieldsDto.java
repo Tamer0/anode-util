@@ -7,11 +7,11 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Map;
 
 @Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class OtherFieldsDto {
 
     /** required: ["otherFieldsVersion"] */
-    @NotNull
+
     private Double otherFieldsVersion;
 
     private Map<String, String> hashMap;

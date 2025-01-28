@@ -9,30 +9,30 @@ import java.util.List;
 import java.util.Map;
 
 @Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class ThresholdCrossingAlertFieldsDto {
 
     /** required: [
      *   "thresholdCrossingAlertFieldsVersion","alertAction","alertType","eventName","thresholdCrossingFieldsVersion"
      * ]
      */
-    @NotNull
+
     private Double thresholdCrossingAlertFieldsVersion;
 
     private Map<String, String> additionalParameters = new HashMap<>();
 
-    @NotNull
+
     private String alertAction; // Örnek: "CLEAR" / "SET" (enum olabilir)
 
     private String alertDescription;
 
-    @NotNull
+
     private String alertType;   // enum olabilir
 
     private Double collectionTimestamp;
     private List<String> embeddedAlertMessage;
 
-    @NotNull
+
     private String eventName;
 
     private String interfaceName;
@@ -43,7 +43,7 @@ public class ThresholdCrossingAlertFieldsDto {
     private String sourceId;
     private String sourceIdType;
 
-    @NotNull
+
     private Double thresholdCrossingFieldsVersion;
 
     /** thresholdCrossingFieldsContent => Map */

@@ -9,16 +9,14 @@ import java.util.Map;
 import java.util.HashMap;
 
 @Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class MeasurementsForVfScalingFieldsDto {
 
     /**
      * required: ["measurementsForVfScalingFieldsVersion", "measurementInterval"]
      */
-    @NotNull
     private Double measurementsForVfScalingFieldsVersion;
 
-    @NotNull
     private Integer measurementInterval;
 
     private List<AdditionalMeasurement> additionalMeasurements;

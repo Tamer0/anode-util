@@ -11,11 +11,11 @@ import java.util.List;
 import java.util.Map;
 
 @Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class MobileFlowFieldsDto {
 
     /** required: ["mobileFlowFieldsVersion"] */
-    @NotNull
+    
     private Double mobileFlowFieldsVersion;
 
     private Map<String, String> additionalFields = new HashMap<>();
@@ -33,52 +33,50 @@ public class MobileFlowFieldsDto {
          *             "flowStartEpochMicrosec","flowStartTime"]
          */
 
-        @NotNull
+        
         private Enums.FlowDirection flowDirection;
 
-        @NotNull
+        
         private Enums.FlowRole flowRole;
 
-        @NotNull
+        
         private Enums.IpProtocolType ipProtocolType;
 
-        @NotNull
+        
         private Enums.GtpConnectionType gtpConnectionType;
 
-        @NotNull
+        
         private Enums.GtpProtocolType gtpProtocolType;
 
-        @NotNull
+        
         private Enums.GtpVersion gtpVersion;
 
-        @NotNull
+        
         private Enums.IpVersion ipVersion;
 
-        @NotNull
+        
         private List<String> otherEndpoints;
 
-        @NotNull
+        
         private Double flowActivationEpochMicrosec;
 
-        @NotNull
+        
         private String flowActivationTime;
 
-        @NotNull
+        
         private Double flowDeactivationEpochMicrosec;
 
-        @NotNull
+        
         private String flowDeactivationTime;
 
-        @NotNull
+        
         private Double flowEndEpochMicrosec;
 
-        @NotNull
+        
         private String flowEndTime;
-
-        @NotNull
+        
         private Double flowStartEpochMicrosec;
-
-        @NotNull
+        
         private String flowStartTime;
 
         // Opsiyoneller

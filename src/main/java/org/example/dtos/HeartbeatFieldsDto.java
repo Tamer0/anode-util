@@ -8,12 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class HeartbeatFieldsDto {
 
     private Map<String, String> additionalFields = new HashMap<>();
 
     /** required: ["heartbeatFieldsVersion"] */
-    @NotNull
     private Double heartbeatFieldsVersion;
 }

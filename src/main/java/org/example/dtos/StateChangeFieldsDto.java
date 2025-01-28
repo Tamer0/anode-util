@@ -6,19 +6,15 @@ import org.jetbrains.annotations.NotNull;
 
 
 @Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class StateChangeFieldsDto {
 
     /** required: ["stateChangeFieldsVersion","newState","oldState","stateInterface"] */
-    @NotNull
     private Double stateChangeFieldsVersion;
 
-    @NotNull
     private String newState;
 
-    @NotNull
     private String oldState;
 
-    @NotNull
     private String stateInterface;
 }

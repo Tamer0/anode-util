@@ -1,15 +1,16 @@
 package org.example.dtos;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.example.dtos.EventDto;
-import org.jetbrains.annotations.NotNull;
+import lombok.NoArgsConstructor;
 
 
 @Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@AllArgsConstructor
+@NoArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class CommonEventFormatDto {
 
-    @NotNull
     private EventDto event;
 }

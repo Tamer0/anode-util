@@ -10,12 +10,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 @NoArgsConstructor
 public class EventDto {
 
     /** Şemada "required": ["commonEventHeader"] */
-    @NotNull
     private CommonEventHeaderDto commonEventHeader;
 
     /** comStnFields: Boş obje => Map kullanıyoruz */

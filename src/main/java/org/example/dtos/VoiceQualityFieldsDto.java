@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 @Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class VoiceQualityFieldsDto {
 
     /**
@@ -19,34 +19,34 @@ public class VoiceQualityFieldsDto {
      *   "sessionEndTime","sipCallId"
      * ]
      */
-    @NotNull
+
     private Double voiceQualityFieldsVersion;
 
-    @NotNull
+
     private String endpointDescription;
 
-    @NotNull
+
     private String endpointRef;
 
-    @NotNull
+
     private String adjacentAccessPointMac;
 
-    @NotNull
+
     private Double meanOpinionScore;
 
-    @NotNull
+
     private Double packetLossRate;
 
-    @NotNull
+
     private Integer sessionDuration;
 
-    @NotNull
+
     private String sessionStartTime;
 
-    @NotNull
+
     private String sessionEndTime;
 
-    @NotNull
+
     private String sipCallId;
 
     // Opsiyoneller

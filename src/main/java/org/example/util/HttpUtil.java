@@ -1,5 +1,6 @@
 package org.example.util;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.example.constants.Enums;
@@ -19,16 +20,19 @@ public class HttpUtil {
     private static final int CONNECT_TIMEOUT = 10000;
     private static final int READ_TIMEOUT = 30000;
     private static Logger logger = Logger.getLogger(HttpUtil.class.getName());
-
-    public static HttpResponse sendRequest(String url, 
+    private static ObjectMapper objectMapper = new ObjectMapper();
+    public static HttpResponse sendRequest(String url,
                                          Enums.HttpMethod method,
                                          Map<String, String> headers, 
                                          Object body, Enums.ContentType contentType) {
         try {
+
+            String jsonBody = objectMapper.writeValueAsString(body);
+
             HttpURLConnection connection = createConnection(url, method, headers, contentType);
             
-            if (body != null && method != Enums.HttpMethod.GET) {
-                writeRequestBody(connection, body, contentType);
+            if (jsonBody != null && method != Enums.HttpMethod.GET) {
+                writeRequestBody(connection, jsonBody, contentType);
             }
             
             return readResponse(connection);

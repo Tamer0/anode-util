@@ -3,14 +3,12 @@ package org.example.dtos;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.constants.Enums;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 @NoArgsConstructor
 public class CommonEventHeaderDto {
 
@@ -18,38 +16,40 @@ public class CommonEventHeaderDto {
      *            "reportingEntityName","sequence","sourceName","startEpochMicrosec",
      *            "version","vesEventListenerVersion"]
      **/
-    @NotNull
-    private Enums.Domain domain;
 
-    @NotNull
+    private String domain;
+
+
     private String eventId;
 
-    @NotNull
+
     private String eventName;
 
-    @NotNull
+
     private Double lastEpochMicrosec;
 
-    @NotNull
-    private Enums.Priority priority;
 
-    @NotNull
+    private String priority;
+
+
     private String reportingEntityName;
 
-    @NotNull
+
     private Integer sequence;
 
-    @NotNull
+
     private String sourceName;
 
-    @NotNull
+
     private Double startEpochMicrosec;
 
-    @NotNull
-    private Double version;
 
-    @NotNull
+    private String version;
+
+
     private String vesEventListenerVersion;
+
+    private String eventType;
 
     /** opsiyonel */
     private String timeZoneOffset;

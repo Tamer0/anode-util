@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class PnfRegistrationFieldsDto {
 
     private Map<String, String> additionalFields = new HashMap<>();
@@ -18,21 +18,21 @@ public class PnfRegistrationFieldsDto {
 
     /** required: ["modelNumber","pNFRegistrationFieldsVersion","serialNumber","vendorName"] */
 
-    @NotNull
+
     private String modelNumber;
 
     private String oamV4IpAddress;
     private String oamV6IpAddress;
 
-    @NotNull
+
     private Double pNFRegistrationFieldsVersion;
 
-    @NotNull
+
     private String serialNumber;
     private String softwareVersion;
     private String unitFamily;
     private String unitType;
 
-    @NotNull
+
     private String vendorName;
 }
